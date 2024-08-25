@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Pet Name 1",
+        "price": "$10",
+        "image": "images/placeholder1.png"
+    },
+    {
+        "name": "Pet Name 2",
+        "price": "$20",
+        "image": "images/placeholder2.png"
+    },
+    {
+        "name": "Pet Name 3",
+        "price": "$30",
+        "image": "images/placeholder3.png"
+    }
+]
