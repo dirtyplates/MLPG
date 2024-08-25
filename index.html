@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muscle Legends Pet Store</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        /* Adjust layout and spacing */
+        #pet-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .pet {
+            flex: 1 1 calc(33.333% - 20px);
+            box-sizing: border-box;
+            text-align: center;
+            position: relative;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        .pet img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .pet p {
+            margin: 5px 0;
+        }
+        .join-discord {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            background-color: #4CAF50; /* Green color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .join-discord:hover {
+            background-color: #45a049; /* Darker green */
+            transform: scale(1.05); /* Slightly enlarge button on hover */
+        }
+        .join-discord:active {
+            background-color: #388e3c; /* Even darker green when clicked */
+            transform: scale(0.98); /* Slightly shrink button when clicked */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Muscle Legends Pet Store!</h1>
+    </header>
+
+    <section id="pet-list">
+        <div class="pet">
+            <img id="pet1-img" src="https://cdn.discordapp.com/attachments/1271568369769775136/1275992619377234013/image.png?ex=66c7e83b&is=66c696bb&hm=b24c6b615fd51318981c14933ade1f51aaace839880053625be485207cb8ffed&" alt="Pet 1">
+            <h2>Level 1 Golden Warriors</h2>
+            <p>Price: ⏣ 10</p>
+            <p>Each gives 1.84k strength per rep. Must have 30 rebirths to equip.</p>
+            <a href="https://discord.com/invite/your-discord-link" class="join-discord">Join the Discord</a>
+        </div>
+        <div class="pet">
+            <img id="pet2-img" src="https://media.discordapp.net/attachments/1271568369769775136/1275993295016693880/image.png?ex=66c7e8dc&is=66c6975c&hm=c08b6cfc66ef7129e671354f156d09b4f0e5a8c269e8cde7c05bb088cef40b18&=&format=webp&quality=lossless&width=363&height=111" alt="Pet 2">
+            <h2>x3 Level 1 Golden Warriors</h2>
+            <p>Price: ⏣ 30</p>
+            <p>Gives 3 pets, each providing 1.84k strength per rep. Must have 30 rebirths to equip.</p>
+            <a href="https://discord.com/invite/your-discord-link" class="join-discord">Join the Discord</a>
+        </div>
+        <div class="pet">
+            <img id="pet3-img" src="https://media.discordapp.net/attachments/1271568369769775136/1275993295016693880/image.png?ex=66c7e8dc&is=66c6975c&hm=c08b6cfc66ef7129e671354f156d09b4f0e5a8c269e8cde7c05bb088cef40b18&=&format=webp&quality=lossless&width=363&height=111" alt="Pet 3">
+            <h2>x6 Level 1 Golden Warriors</h2>
+            <p>Price: ⏣ 60</p>
+            <p>Gives 6 pets, each providing 1.84k strength per rep. Must have 30 rebirths to equip.</p>
+            <a href="https://discord.com/invite/your-discord-link" class="join-discord">Join the Discord</a>
+        </div>
+    </section>
+
+<!-- New Pets Section -->
+<section id="new-pets">
+    <h2>Starter pets! [ANY REBIRTH AMOUNT]</h2>
+    <div class="pet-list">
+        <div class="pet">
+            <img src="https://cdn.discordapp.com/attachments/1271568369769775136/1275999142979571778/image.png?ex=66c7ee4e&is=66c69cce&hm=2a1770f90b84995d00ebeec3439dfc32317d3ad3a2ef47a6fb07f876d03ed2a0&" alt="New Pet 1">
+            <h2>New Pet Name 1</h2>
+            <p>Price: ⏣ 15</p>
+            <p>Description: This is a cool guy larry, It gives 1.34k strength per rep. and can be used at ANY rebirth.</p>
+            <button class="discord-btn">Join the Discord</button>
+        </div>
+        <div class="pet">
+            <img src="https://media.discordapp.net/attachments/1271568369769775136/1275999337859514388/image.png?ex=66c7ee7d&is=66c69cfd&hm=d5e79832c6562d36833a7fb0b4ef79d3e80f48e508091717aa15925ab8d60a18&=&format=webp&quality=lossless&width=359&height=117" alt="New Pet 2">
+            <h2>New Pet Name 2</h2>
+            <p>Price: ⏣ 45</p>
+            <p>Description: This is a cool guy larry, It gives 1.34k strength per rep. and can be used at ANY rebirth.</p>
+            <button class="discord-btn">Join the Discord</button>
+        </div>
+        <div class="pet">
+            <img src="https://media.discordapp.net/attachments/1271568369769775136/1275999259279495350/image.png?ex=66c7ee6a&is=66c69cea&hm=a4ec1b9f9a4026d2c8fbfeacf567a3cdd69bcce4756ad96f6a2fc3fe0e8ea634&=&format=webp&quality=lossless&width=366&height=243" alt="New Pet 3">
+            <h2>New Pet Name 3</h2>
+            <p>Price: ⏣ 90</p>
+            <p>Description: This is a cool guy larry, It gives 1.34k strength per rep. and can be used at ANY rebirth.</p>
+            <button class="discord-btn">Join the Discord</button>
+        </div>
+        <!-- Add more pet cards as needed -->
+    </div>
+</section>
