@@ -7,8 +7,8 @@
     <style>
         /* General Body Styles */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #e0f7fa; /* Light cyan background */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f8ff; /* Light blue background */
             color: #333; /* Dark text color for contrast */
             margin: 0;
             padding: 0;
@@ -16,30 +16,33 @@
 
         /* Header Styles */
         header {
-            background-color: #4caf50; /* Green color for header */
+            background-color: #009688; /* Teal color for header */
             color: white;
             text-align: center;
             padding: 20px;
-            border-bottom: 5px solid #388e3c; /* Darker green border */
+            border-bottom: 4px solid #00796b; /* Darker teal border */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
         }
 
         /* Pet List Styles */
         #pet-list {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             flex-wrap: wrap;
             padding: 20px;
             gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .pet {
-            background-color: #a5d6a7; /* Light green background for each pet */
-            border: 2px solid #4caf50; /* Green border */
+            background-color: #ffffff; /* White background for each pet */
+            border: 2px solid #009688; /* Teal border */
             border-radius: 12px; /* Rounded corners */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
             padding: 20px;
             text-align: center;
-            width: 220px;
+            width: 280px;
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
@@ -51,18 +54,20 @@
         .pet img {
             max-width: 100%;
             height: auto;
-            border-radius: 8px;
-            border: 2px solid #4caf50; /* Green border around images */
+            border-radius: 10px;
+            border: 2px solid #009688; /* Teal border around images */
         }
 
         .pet h2 {
-            color: #388e3c; /* Darker green for pet names */
+            color: #00796b; /* Darker teal for pet names */
             font-size: 1.5em;
+            margin: 10px 0;
         }
 
         .pet p {
-            font-size: 1.2em;
-            color: #333;
+            font-size: 1em;
+            color: #555; /* Slightly lighter text color */
+            margin: 5px 0;
         }
 
         /* Responsive Styles */
@@ -76,7 +81,7 @@
         /* New Pets Section Styles */
         #new-pets {
             padding: 20px;
-            background-color: #e6ffe6; /* Light green background */
+            background-color: #e0f2f1; /* Light teal background */
             border-radius: 10px;
             margin: 20px auto;
             max-width: 1200px;
@@ -84,11 +89,18 @@
 
         #new-pets h2 {
             text-align: center;
+            color: #00796b; /* Darker teal for section title */
             margin-bottom: 20px;
         }
 
+        #new-pets .pet-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* Space between items */
+        }
+
         #new-pets .pet {
-            background-color: #fff;
+            background-color: #ffffff; /* White background */
             padding: 15px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -105,6 +117,7 @@
 
         #new-pets .pet h2 {
             margin: 10px 0;
+            color: #00796b; /* Darker teal for pet names */
         }
 
         #new-pets .pet p {
@@ -112,7 +125,7 @@
         }
 
         #new-pets .pet .discord-btn {
-            background-color: #4CAF50; /* Green background */
+            background-color: #009688; /* Teal background */
             color: #fff;
             border: none;
             padding: 10px 20px;
@@ -127,91 +140,37 @@
         }
 
         #new-pets .pet .discord-btn:hover {
-            background-color: #45a049; /* Darker green on hover */
+            background-color: #00796b; /* Darker teal on hover */
         }
 
-        /* Flexbox layout for the pet section */
-        #new-pets .pet-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px; /* Space between items */
-        }
-
-        /* Additional Styles */
-        #pet-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .pet {
-            flex: 1 1 calc(33.333% - 20px);
-            box-sizing: border-box;
-            text-align: center;
-            position: relative;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            background-color: #f9f9f9;
-        }
-        .pet img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
-        .pet p {
-            margin: 5px 0;
-        }
-        .join-discord {
-            display: block;
-            margin: 10px auto;
-            padding: 10px;
-            background-color: #4CAF50; /* Green color */
+        /* Terms of Service Link Styles */
+        #tos {
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: #009688; /* Teal background */
             color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+            padding: 10px;
+            border-radius: 0 0 0 10px;
+            z-index: 1000;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        #tos a {
+            color: white;
             text-decoration: none;
-            font-size: 16px;
-            transition: background-color 0.3s, transform 0.3s;
+            font-weight: bold;
         }
-        .join-discord:hover {
-            background-color: #45a049; /* Darker green */
-            transform: scale(1.05); /* Slightly enlarge button on hover */
-        }
-        .join-discord:active {
-            background-color: #388e3c; /* Even darker green when clicked */
-            transform: scale(0.98); /* Slightly shrink button when clicked */
-        }
-        
-    /* TOS Link Styles */
-    #tos {
-        position: fixed;
-        top: 0;
-        right: 0;
-        background-color: #4caf50; /* Green background */
-        color: white;
-        padding: 10px;
-        border-radius: 0 0 0 10px;
-        z-index: 1000;
-        font-size: 14px;
-        text-align: center;
-    }
 
-    #tos a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-    #tos a:hover {
-        text-decoration: underline;
-    }
-</style>
+        #tos a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to The muscle legends Pickle Groug!</h1>
+        <h1>Welcome to Muscle Legends Pet Store!</h1>
     </header>
 
     <section id="pet-list">
@@ -231,7 +190,6 @@
         </div>
         <div class="pet">
             <img src="images/pet3.png" alt="Pet 3">
-             <img src="images/pet3.png" alt="Pet 3">
             <h2>x6 Level 1 Golden Warriors</h2>
             <p>Price: ⏣ 60</p>
             <p>Gives 6 pets, each providing 1.84k strength per rep. Must have 30 rebirths to equip.</p>
@@ -266,11 +224,10 @@
             </div>
         </div>
     </section>
+
+    <!-- Terms of Service Link -->
+    <div id="tos">
+        <p><a href="templates/tos.html">Terms of Service</a></p>
+    </div>
 </body>
 </html>
-
-<!-- Terms of Service Link -->
-<div id="tos">
-    <p><a href="templates/tos.html">Terms of Service</a></p>
-</div>
-
